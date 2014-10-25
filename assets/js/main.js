@@ -140,6 +140,10 @@ $(document).one("ajaxStop", function () {$("#loading").hide(); });
    });
 
         $("#addbutton").on('click', function () {
-        $('#pubeditbeerlist').append('<div class="checkbox"><label><input type="checkbox" name="beer" checked="true" value="' + $("#beer-other").val() +'">'+$("#beer-other").val()+'</label></div>');
-        $('#beer-other').val("");
+           if ($('#beer-other').val()!='')
+            {
+            BeerName = $('#beer-other').val();
+            $('#container_editbeerlist').append('<div class="checkbox"><input type="checkbox" name="beer" id="checkboxes-'+BeerName+'" value="'+BeerName+'" checked="true" /><label for="checkboxes-'+BeerName+'">'+BeerName+'</label></div>');
+            $('#beer-other').val("");
+            }
     });

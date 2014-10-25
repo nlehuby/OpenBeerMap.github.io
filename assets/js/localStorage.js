@@ -67,7 +67,7 @@
   };
 
   function UpdateBeerList_Edition_Form() {
-     var htmlBeers = '          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label><div class="col-md-4">';
+     var htmlBeers = '          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres" id="liste_des_bieres" >Bière pression dispo</label><div class="col-md-4" id="container_editbeerlist">';
      i=0;
      for (var myi in BeerName) {
        if (BeerName.hasOwnProperty(myi)) {
@@ -78,6 +78,7 @@
          i++;
          }
       }
+      
      document.getElementById('pubeditbeerlist').innerHTML = htmlBeers;
 };
 
